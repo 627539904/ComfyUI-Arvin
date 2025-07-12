@@ -267,7 +267,7 @@ class VAE:
 
         self.downscale_index_formula = None
         self.upscale_index_formula = None
-
+        self.vae_dtype=torch.float16
         if config is None:
             if "decoder.mid.block_1.mix_factor" in sd:
                 encoder_config = {'double_z': True, 'z_channels': 4, 'resolution': 256, 'in_channels': 3, 'out_ch': 3, 'ch': 128, 'ch_mult': [1, 2, 4, 4], 'num_res_blocks': 2, 'attn_resolutions': [], 'dropout': 0.0}

@@ -1,0 +1,11 @@
+# ComfyUI 基础配置
+system:
+  vram_usage: balanced # 可选: high/low/balanced，显存分配策略
+  deterministic: false # 是否启用确定性算法
+
+vae_settings:
+  vae_dtype: torch.float16 # 可选: float32/bfloat16，控制VAE计算精度
+  vae_offload: true # 显存不足时启用，显存不足时将VAE部分计算卸载到CPU
+
+logging:
+  vae_decoder: warning # 可选: debug/info/warning/error
